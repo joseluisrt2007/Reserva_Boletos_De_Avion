@@ -1,6 +1,6 @@
 #include "Menu.h"
 #include <iostream>
-
+//preuba
 #include <string>
 #include <limits>
 using namespace std; 
@@ -144,4 +144,5 @@ void Menu::MostrarMenu() const
 			break;
 		}
 	} while (opcionMenu != 3);
+
 }
