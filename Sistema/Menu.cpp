@@ -1,9 +1,58 @@
 #include "Menu.h"
 #include <iostream>
-
 #include <string>
 #include <limits>
+#include <chrono>
+#include <thread>
 using namespace std; 
+
+// -------------------- Pantalla de inicio --------------------
+void Menu::MostrarPantallaInicio() const
+{
+    system("mode con cols=200 lines=80"); // Ajusta tamaño de consola
+    system("color F9"); // Fondo blanco con texto azul
+
+    cout <<
+               R"(                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                            ##              ##                                                                          
+                        ####                  ####                                                                      
+                        ####                  ####                                                                      
+                      ##                    ##    ##                                                                    
+                      ####    ######..  ######  ####                                                                    
+                    ##            ########      ##  ##      ##                    ++++##++                              
+                      mm    ##    ########                ##  ##  ##########--####::  ##  ######  ####..                
+                        ##    ####    ####      ##  MM    ##  ##  ##  ####  --    ##  ##  ##  ##  MM                    
+                          ##    ##      ##      --MM    MM######  ##    ##    ++  ##  ##  ##      ##                    
+                      ##  ##                            ##      ######@@##    ####    ##    ####  ####                  
+                  @@##  @@                        ##                                                                    
+                    ##      ##              ##          ######  ######    @@##  ####--####  ##########                  
+                          ##mm  ##      ##  ####        ######  ######    ####  ####..####  --##    ####                
+                            ####mm##  MM######                                                                          
+                                  ##  ##                                                                                
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+)" << endl;
+
+    this_thread::sleep_for(chrono::seconds(4)); // Pausa de 4 segundos
+    system("color 07");   // Restablece colores
+    system("cls");        // Limpia la pantalla
+}
 
 void Menu::MostrarMenuAdmin(){
     int opcion;
@@ -144,4 +193,5 @@ void Menu::MostrarMenu() const
 			break;
 		}
 	} while (opcionMenu != 3);
+
 }
