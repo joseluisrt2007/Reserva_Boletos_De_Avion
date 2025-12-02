@@ -15,4 +15,6 @@ public:
 	void MostrarMenuAdmin();
 	void MostrarMenu() const;
 	void MostrarMenuPrincipal();
+	void MostrarPantallaInicio() const;
+
 };
